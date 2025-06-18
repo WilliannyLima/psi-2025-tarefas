@@ -4,13 +4,10 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def index(request):
+def usuarios(request):
     lista_usuarios = [
-    {"nome": "Michael Douglas","idade": 23},
-    {"nome": "James Wilson","idade": 55},
-    {"nome": "Peter Parker","idade": 22},
+    {"nome": "Michael Douglas","idade": "23"},
+    {"nome": "James Wilson","idade": "55"},
+    {"nome": "Peter Parker","idade": "22"},
 ]
-    context = {
-        "usuarios": lista_usuarios,
-    }
-    return render(request,"index.html", context)
+    return render(request, 'usuarios.html', {'usuarios': lista_usuarios})
