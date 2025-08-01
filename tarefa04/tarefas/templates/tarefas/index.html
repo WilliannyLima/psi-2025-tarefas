@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<h1>Lista de Tarefas</h1>
+<ul class="tarefas">
+  {% for tarefa in tarefas %}
+    <li class="{% if tarefa.prazo < hoje and not tarefa.status %}atrasada{% elif tarefa.status %}concluida{% endif %}">
+      <strong>{{ tarefa.nome }}</strong>
+      <span class="data-prazo"> - Prazo: {{ tarefa.prazo }}</span>
+    </li>
+  {% endfor %}
+</ul>
+
+</body>

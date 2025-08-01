@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 40px;
+    color: #333;
+}
+
+h1 {
+    color: #222;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ul.tarefas {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.tarefas li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+li.atrasada {
+    border-left: 5px solid red;
+    background-color: #ffe6e6;
+    color: #a00;
+}
+
+li.concluida {
+    border-left: 5px solid green;
+    background-color: #e6ffe6;
+    text-decoration: line-through;
+    color: #0a0;
+}
+
+.data-prazo {
+    font-size: 0.9em;
+    color: #777;
+}
